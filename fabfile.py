@@ -22,7 +22,6 @@ from fabric.contrib.project import rsync_project
 from fabric.colors import yellow, green, blue, red
 from fabric.decorators import hosts
 
-
 ################
 # Config setup #
 ################
@@ -74,7 +73,6 @@ if env.deploy_tool == "git":
     env.repo_path = "/home/%s/git/%s.git" % (env.user, env.proj_name)
 else:
     env.repo_path = env.proj_path
-
 
 ##################
 # Template setup #
@@ -635,7 +633,6 @@ def deploy():
             rsync_upload()
     with project():
         manage("collectstatic -v 0 --noinput")
-        manage("syncdb --noinput")
         manage("migrate --noinput")
     for name in get_templates():
         upload_template_and_reload(name)
