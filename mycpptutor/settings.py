@@ -262,6 +262,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     # Uncomment if using internationalisation or localisation
     # 'django.middleware.locale.LocaleMiddleware',
+    'unslashed.middleware.RemoveSlashMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -338,3 +339,8 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+# If a path ends with a slash and is invalid, remove that trailing slash.
+APPEND_SLASH = False
+REMOVE_SLASH = True
+
