@@ -6,7 +6,7 @@ upstream %(proj_name)s {
 server {
     listen %(port_num)s;
     server_name %(domains_nginx_redirect)s;
-    return 301 $scheme://%(domains_nginx)s$request_uri:%(port_num)s;
+    return 301 $scheme://%(domains_nginx)s:%(port_num)s$request_uri;
 }
 
 server {
