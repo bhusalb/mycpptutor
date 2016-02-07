@@ -4,8 +4,14 @@ upstream %(proj_name)s {
 }
 
 server {
+    listen %(port_num)s;
+    server_name %(domains_nginx_redirect)s;
+    return 301 $scheme://%(domains_nginx)s$request_uri:%(port_num)s;
+}
 
-    listen 81;
+server {
+
+    listen %(port_num)s;
     %(ssl_disabled)s listen 443 ssl;
     server_name %(domains_nginx)s;
     client_max_body_size 10M;
