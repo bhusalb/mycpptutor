@@ -9,13 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 ######################
 # MEZZANINE SETTINGS #
 ######################
-
-# The following settings are already defined with default values in
-# the ``defaults.py`` module within each of Mezzanine's apps, but are
-# common enough to be put here, commented out, for conveniently
-# overriding. Please consult the settings documentation for a full list
-# of settings Mezzanine implements:
-# http://mezzanine.jupo.org/docs/configuration.html#default-settings
+SITE_TITLE = "MyCppTutor"
 
 # Controls the ordering and grouping of the admin menu.
 #
@@ -42,11 +36,10 @@ from django.utils.translation import ugettext_lazy as _
 # menus a page should appear in. Note that if a menu template is used
 # that doesn't appear in this setting, all pages will appear in it.
 
-# PAGE_MENU_TEMPLATES = (
-#     (1, _("Top navigation bar"), "pages/menus/dropdown.html"),
-#     (2, _("Left-hand tree"), "pages/menus/tree.html"),
-#     (3, _("Footer"), "pages/menus/footer.html"),
-# )
+PAGE_MENU_TEMPLATES = (
+    (1, _("Top navigation bar"), "pages/menus/dropdown.html"),
+    (2, _("Footer"), "pages/menus/footer.html"),
+)
 
 # A sequence of fields that will be injected into Mezzanine's (or any
 # library's) models. Each item in the sequence is a four item sequence.
@@ -84,7 +77,6 @@ from django.utils.translation import ugettext_lazy as _
 # If True, the django-modeltranslation will be added to the
 # INSTALLED_APPS setting.
 USE_MODELTRANSLATION = False
-
 
 ########################
 # MAIN DJANGO SETTINGS #
