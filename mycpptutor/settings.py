@@ -223,6 +223,7 @@ if DJANGO_VERSION < (1, 9):
 
 INSTALLED_APPS = (
     "bootstrap_themes",
+    "mezzanine_pagedown",
     "sst_theme",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -331,3 +332,6 @@ except ImportError:
 else:
     set_dynamic_settings(globals())
 
+RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
+RICHTEXT_FILTERS = ['mezzanine_pagedown.filters.codehilite']
+RICHTEXT_FILTER_LEVEL = 3
