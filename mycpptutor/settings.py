@@ -332,6 +332,4 @@ except ImportError:
 else:
     set_dynamic_settings(globals())
 
-RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
 RICHTEXT_FILTERS = ['mezzanine_pagedown.filters.codehilite']
-RICHTEXT_FILTER_LEVEL = 3
