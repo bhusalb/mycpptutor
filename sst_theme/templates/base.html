@@ -16,11 +16,11 @@
 <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
 {% endifinstalled %}
 
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=OpenSans">
 {% compress css %}
 <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
 <link rel="stylesheet" href="{% static "css/codehilite.css" %}">
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=OpenSans">
 {% bootstrap_styles theme='flatly' type='css' %}
 {% block extra_css %}{% endblock %}
 {% endcompress %}
