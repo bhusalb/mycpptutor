@@ -3,12 +3,12 @@ from __future__ import unicode_literals
 SECRET_KEY = "%(secret_key)s"
 NEVERCACHE_KEY = "%(nevercache_key)s"
 ALLOWED_HOSTS = [%(domains_python)s]
-ADMINS = %(admins)
-EMAIL_HOST_USER = %(email_host_user)
+ADMINS = %(admins)s
+EMAIL_HOST_USER = "%(email_host_user)s"
 EMAIL_USE_TLS = True
-EMAIL_HOST = %(email_host)
-EMAIL_HOST_PASSWORD = %(email_pass)
-EMAIL_PORT = %(email_port)
+EMAIL_HOST = "%(email_host)s"
+EMAIL_HOST_PASSWORD = "%(email_pass)s"
+EMAIL_PORT = %(email_port)s
 SERVER_EMAIL = EMAIL_HOST_USER
 SEND_BROKEN_LINK_EMAILS = True
 
