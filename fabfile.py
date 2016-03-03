@@ -42,11 +42,16 @@ if sys.argv[0].split(os.sep)[-1] in ("fab", "fab-script.py"):
         exit()
 
 env.db_pass = conf.get("DB_PASS", None)
+env.email_pass = conf.get("EMAIL_PASS", None)
+env.admins = conf.get("ADMINS", None)
 env.admin_pass = conf.get("ADMIN_PASS", None)
 env.user = conf.get("SSH_USER", getuser())
 env.password = conf.get("SSH_PASS", None)
 env.key_filename = conf.get("SSH_KEY_PATH", None)
 env.hosts = conf.get("HOSTS", [""])
+env.email_host = conf.get("EMAIL_HOST", None)
+env.email_host_user = conf.get("EMAIL_HOST_USER", None)
+env.email_port = conf.get("EMAIL_PORT", None)
 
 env.proj_name = conf.get("PROJECT_NAME", env.proj_app)
 env.venv_home = conf.get("VIRTUALENV_HOME", "/home/%s/.virtualenvs" % env.user)
