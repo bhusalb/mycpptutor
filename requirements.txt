@@ -1,7 +1,2 @@
 django-bootstrap-themes==3.1.3
-markdown==2.6.5
 Mezzanine==4.1.0
-# Update when PyPi has the updated package in it.
-# https://bitbucket.org/akhayyat/mezzanine-pagedown/commits/c6a96630d83c0662cdc287b9ba2e3917cc8e437b
-#mezzanine-pagedown==0.9
-pygments==2.1.1
