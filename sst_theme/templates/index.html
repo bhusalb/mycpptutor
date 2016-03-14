@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load sst_testimonials_templates %}
 
 {% block meta_title %}{% trans "C++ Tutor: Find a Tutor or Get C++ Lessons" %}{% endblock %}
 {% block meta_description %}{% trans "Get a C++ tutor, or get help through blog posts written to help with your C++ assignments. Let me help you get through your C++ class." %}{% endblock %}
@@ -11,6 +12,9 @@
 {% endblock %}
 
 {% block main %}
+
+{% get_testimonials as testimonials %}
+
 {% blocktrans %}
 <p><iframe class="wistia_embed" src="//fast.wistia.net/embed/iframe/40hiil5bak" name="wistia_embed" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe><script src="//fast.wistia.net/assets/external/E-v1.js" async=""></script></p>
 <h3>Need help with a C++ programming assignment?</h3>
@@ -40,14 +44,9 @@
 <p>There are several things I did to get through the class.  I read sections and chapters of my textbook several times.  I kept working on the C++ assignments in the lab we had&#8230; sometimes for a really long time to make sure I understood what I was doing.  You must understand, learning programming is a step-by-step process.  There will be periods of a lot of frustration followed by those &#8220;eureka!&#8221; moments.  That feeling of finally getting something right is one of the best feelings in the world.</p><div class='mailmunch-forms-in-post-middle' style='display: none !important;'></div>
 <p>However, that doesn&#8217;t work for everybody.  Some people need more help, and this is where an online C++ tutor can help.  I can help with all those concepts mentioned above, as well as many more.  I have several years of work experience with C++, and I have also tutored several C++ college students.</p>
 <p style="text-align: center;">Here&#8217;s what others have to say about my C++ tutoring:</p>
-<table>
-<tbody>
-<tr>
-<td>[testimonials_slider]</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
+
+{{ testimonials }}
+
 <p>Here&#8217;s how you can use my site (see the tabs at the top or bottom of every page on this site):</p>
 <ul>
 <li><a href="/get-cpp-tutor/">C++ Tutor</a> tells you about how I can tutor you with your C++ programming assignments.</li>
@@ -57,5 +56,6 @@
 </ul>
 <h3></h3>
 <p>I wish you the best of luck in your C++ programming class.  Please let me know if I can help with a blog post or lesson.</p>
+
 {% endblocktrans %}
 {% endblock %}

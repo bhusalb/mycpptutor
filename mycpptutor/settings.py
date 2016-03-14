@@ -223,6 +223,7 @@ if DJANGO_VERSION < (1, 9):
 
 INSTALLED_APPS = (
     "bootstrap_themes",
+    "sst_testimonials",
     "sst_theme",
     "django.contrib.admin",
     "django.contrib.auth",
