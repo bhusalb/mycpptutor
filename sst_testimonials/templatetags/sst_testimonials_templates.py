@@ -10,21 +10,20 @@ def get_testimonials():
 <div id="cbp-qtrotator" class="cbp-qtrotator">
 
 <div class="cbp-qtcontent current"> 
-<img src="1.jpg" alt="img01" />
 <blockquote>
 <p>Quote 1</p>
 <footer>Author 1</footer>
 </blockquote>
 </div>
 
-<div class="cbp-qtcontent"> <img src="2.jpg" alt="img02" />
+<div class="cbp-qtcontent"> 
 <blockquote>
 <p>Quote 2</p>
 <footer>Author 2</footer>
 </blockquote>
 </div>
 
-<div class="cbp-qtcontent"> <img src="3.jpg" alt="img03" />
+<div class="cbp-qtcontent">
 <blockquote>
 <p>Quote 3</p>
 <footer>Author 3</footer>
