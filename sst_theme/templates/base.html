@@ -114,6 +114,9 @@ $(document).ready(function() {
 </div>
 
 <div class="col-md-3 right">
+    {% nevercache %}
+    {% include "includes/user_panel.html" %}
+    {% endnevercache %}
     {% block right_panel %}
 <!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
